@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Questionário</title>
+    <!-- Materialize CSS
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    -->
+    <!--Materialize Fonts
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    -->
+   
+            
+</head>
+<body>
+    
+    <!--INÍCIO DO QUESTIONÁRIO-->
+    <form id="pergunta1" action="script.js">
+        <p>
+            <input type="radio" name="internet" onclick="executar1()" id="sem-acesso">
+            <label for="sem-acesso">Sem acesso à Internet</label>
+        </p>
+        <p>
+            <input type="radio" name="internet" onclick="executar1()" id="lentidao-internet">
+            <label for="lentidao-internet">Internet está lenta ou com quedas</label>
+        </p>
+    </form>
+
+    <form id="pergunta-sem-acesso" action="script.js" style="display: none;">
+        <p>
+            <input type="radio" name="internet" onclick="executar_sem_acesso()" id="via-radio">
+            <label for="sem-acesso">Internet via Rádio</label>
+        </p>
+        <p>
+            <input type="radio" name="internet" onclick="executar_sem_acesso()" id="via-fibra">
+            <label for="lentidao-internet">Internet via Fibra Óptica</label>
+        </p>
+    </form>
+
+    <form id="pergunta-leds-fibra" action="script.js" style="display: none;">
+        <p>
+            <input type="radio" name="internet" onclick="executar_estado_leds_onu()" id="led-vermelho">
+            <label for="led-vermelho">LED aceso em vermelho</label>
+        </p>
+        <p>
+            <input type="radio" name="internet" onclick="executar_estado_leds_onu()" id="led-verde">
+            <label for="led-verde">LEDs acesos todos em verde</label>
+        </p>
+        <p>
+            <input type="radio" name="internet" onclick="executar_estado_leds_onu()" id="sem-led">
+            <label for="sem-led">Nenhum LED ligado</label>
+        </p>
+        <p>
+            <input type="radio" name="internet" onclick="executar_estado_leds_onu()" id="sem-onu">
+            <label for="sem-onu">Sem acesso à ONU</label>
+        </p>
+    </form>
+
+    <form id="" action="script.js" style="display: none;">
+        <p>
+            <input type="radio" name="internet" onclick="executar_sem_acesso()" id="via-radio">
+            <label for="sem-acesso">Internet via Rádio</label>
+        </p>
+        <p>
+            <input type="radio" name="internet" onclick="executar_sem_acesso()" id="via-fibra">
+            <label for="lentidao-internet">Internet via Fibra Óptica</label>
+        </p>
+    </form>
+
+    <!--RESPOSTA-->
+    <h1 id="resposta"></h1>
+
+    <!--LEMBRETES-->
+    <h2 id="lembrete"></h2>
+
+
+    <!-- Materialize JS-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>-->
+    <script src="script.js" type="text/javascript"></script>
+</body>
+</html>
